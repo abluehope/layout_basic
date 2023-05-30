@@ -1,0 +1,149 @@
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 7px 20px 5px 20px;
+  border: 1px solid #333;
+  color: #333;
+  font-size: 14px;
+}
+
+.btn.white {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn.blue {
+  border: 1px solid #369;
+  color: #369;
+}
+
+.sec {
+  padding: 100px 0;
+}
+
+.sec .title {
+  max-width: 1200px;
+  margin: 0 auto 28px auto;
+  padding: 0 15px;
+}
+
+.sec h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.sec .title p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.header {
+  height: 100vh;
+}
+
+/* 그리드로 하는 방법 */
+.main_event .content {
+  display: grid;
+  /* ↓↓↓ 외우기 ↓↓↓ */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* 이미지 박스 반응형 레거시한 방법
+@media (max-width: 768px) {
+  .main_event .content {
+    flex-direction: column;
+  }
+} */
+
+/* midea query 안 쓰고 하는 방법 */
+/* .main_event .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.main_event .content > figure {
+  flex: 1 0 300px;
+  /* 최소 300px
+} */
+
+.main_event .img_box {
+  margin: 0 0 20px 0;
+  overflow: hidden;
+}
+
+.main_event .img_box img {
+  transition: 1s;
+}
+
+.main_event .img_box:hover img {
+  transform: scale(1.2);
+}
+
+.main_event .des {
+  margin: 0 0 10px 0;
+}
+
+.main_event .des li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.main_event .des li strong {
+  position: relative;
+  font-weight: 500;
+  padding: 0 0 0 20px;
+}
+
+.main_event .des li strong::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: #333;
+  transform: translate(0, -50%);
+}
+
+/* .main_event .btn {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+} */
+
+.main_event .case {
+  text-align: right;
+}
+
+.main_product {
+  background: #f9f9f9;
+}
+
+.main_product .content {
+  display: flex;
+  gap: 30px;
+}
+
+/* 박스 반반씩 */
+.main_product .content > * {
+  flex: 1;
+  /* 넘치는 슬라이드를 안으로 가둬버린다 */
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .main_product .content {
+    flex-direction: column;
+  }
+}
